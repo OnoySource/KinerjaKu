@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Karyawan | KinerjaKu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/employees.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <div id="sidebarContainer" data-base="../"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="topbar">
+            <div>
+                <h2>Data Karyawan</h2>
+                <p>Kelola informasi dan data seluruh karyawan peternakan.</p>
+            </div>
+
+            <div class="topbar-date" id="currentDate"></div>
+        </header>
+
+        <!-- INTRO -->
+        <section class="employee-intro">
+            <div>
+                <span class="intro-label">
+                    <i class="fa-solid fa-users"></i>
+                    MANAJEMEN SUMBER DAYA MANUSIA
+                </span>
+
+                <h2>Kelola Tim Kerja Anda</h2>
+
+                <p>
+                    Pantau dan kelola informasi karyawan peternakan
+                    dalam satu tempat.
+                </p>
+            </div>
+
+            <div class="intro-illustration">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="employee-summary">
+
+            <!-- TOTAL KARYAWAN -->
+            <div class="employee-summary-card">
+                <div class="summary-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <span>Total Karyawan</span>
+                    <strong id="totalEmployees">7</strong>
+                </div>
+            </div>
+
+            <!-- KARYAWAN AKTIF -->
+            <div class="employee-summary-card">
+                <div class="summary-icon green">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <div>
+                    <span>Karyawan Aktif</span>
+                    <strong id="activeEmployees">7</strong>
+                </div>
+            </div>
+
+            <!-- BIDANG PEKERJAAN -->
+            <div class="employee-summary-card">
+                <div class="summary-icon orange">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <div>
+                    <span>Bidang Pekerjaan</span>
+                    <strong id="totalDepartments">6</strong>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TABLE CARD -->
+        <section class="employee-table-card">
+
+            <!-- TABLE HEADER -->
+            <div class="employee-table-header">
+                <div>
+                    <h3>Daftar Karyawan</h3>
+
+                    <p>
+                        Informasi lengkap karyawan yang terdaftar
+                        dalam sistem.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    class="employee-add-button"
+                    id="addEmployeeButton"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Tambah Karyawan
+                </button>
+            </div>
+
+            <!-- TOOLBAR -->
+            <div class="employee-toolbar">
+
+                <!-- SEARCH -->
+                <div class="employee-search">
+                    <i class="fa-solid fa-search"></i>
+
+                    <input
+                        type="text"
+                        id="employeeSearch"
+                        placeholder="Cari nama, jabatan, atau departemen..."
+                    >
+                </div>
+
+                <!-- FILTER -->
+                <div class="employee-filter">
+                    <select id="departmentFilter">
+                        <option value="">Semua Departemen</option>
+                        <option value="Manajemen">Manajemen</option>
+                        <option value="Operasional">Operasional</option>
+                        <option value="Produksi">Produksi</option>
+                        <option value="Pemasaran">Pemasaran</option>
+                        <option value="Keuangan">Keuangan</option>
+                        <option value="Distribusi">Distribusi</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- EMPLOYEE TABLE -->
+            <div class="employee-table-wrapper">
+
+                <table class="employee-table">
+
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>KARYAWAN</th>
+                            <th>JABATAN</th>
+                            <th>DEPARTEMEN</th>
+                            <th>STATUS</th>
+                            <th>AKSI</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeesTableBody">
+                        <!-- Data diisi melalui employees.js -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- TABLE FOOTER -->
+            <div class="employee-table-footer">
+                <span id="employeeShowing">
+                    Menampilkan data karyawan
+                </span>
+
+                <span>Data Karyawan KinerjaKu</span>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>
+                © 2026 KinerjaKu. Sistem Informasi Penilaian Kinerja.
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+<script src="../assets/js/employees.js"></script>
+
+</body>
+</html>

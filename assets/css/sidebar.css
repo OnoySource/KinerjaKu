@@ -1,0 +1,320 @@
+
+/* =====================================
+   SIDEBAR - DARK NAVY
+===================================== */
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 255px;
+    height: 100vh;
+
+    padding: 25px 18px 22px;
+
+    background: #172B43;
+    border-right: 1px solid #263D58;
+}
+
+/* =====================================
+   BRAND
+===================================== */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 10px 30px;
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: #fff;
+    background: #1675c5;
+    border-radius: 12px;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.sidebar-brand h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.sidebar-brand h2 span {
+    color: #55AEF5;
+}
+
+/* =====================================
+   MENU
+===================================== */
+
+.sidebar-menu {
+    flex: 0 0 auto;
+    min-height: 0;
+    max-height: calc(100vh - 240px);
+    overflow-y: auto;
+}
+
+.menu-label {
+    padding: 0 12px;
+    margin: 8px 0 14px;
+
+    color: #8294A9;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 13px 14px;
+    margin-bottom: 6px;
+
+    color: #A9B8C9;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: .2s;
+}
+
+.menu-item i {
+    width: 19px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.menu-item:hover {
+    color: #fff;
+    background: #263F5C;
+}
+
+.menu-item.active {
+    color: #fff;
+    background: #1675c5;
+    font-weight: 700;
+}
+
+/* =====================================
+   SIDEBAR BOTTOM
+===================================== */
+
+.sidebar-bottom {
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 12px;
+    padding: 12px 0 0;
+
+    border-top: 1px solid #30445D;
+}
+
+/* =====================================
+   USER PROFILE
+===================================== */
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 4px 5px;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+    min-width: 39px;
+
+    color: #fff;
+    background: #28618F;
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 4px;
+}
+
+.user-info strong {
+    overflow: hidden;
+
+    color: #fff;
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-info span {
+    color: #A9B8C9;
+    font-size: 10px;
+}
+
+/* =====================================
+   LOGOUT
+===================================== */
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    padding: 12px 14px;
+
+    color: #FF9292;
+    background: rgba(223, 85, 85, 0.10);
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.logout-button:hover {
+    color: #fff;
+    background: #DF5555;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.main-content {
+    width: calc(100% - 255px);
+    min-height: 100vh;
+    margin-left: 255px;
+}
+
+/* =====================================
+   VIEWER - READ ONLY
+===================================== */
+
+.viewer-mode #addEmployeeButton,
+.viewer-mode #evaluationForm button[type="submit"],
+.viewer-mode .employee-actions {
+    display: none !important;
+}
+
+.viewer-mode #evaluationForm input,
+.viewer-mode #evaluationForm select {
+    pointer-events: none;
+    opacity: .7;
+}
+
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+    }
+
+}
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 72px;
+        padding: 20px 10px;
+    }
+
+    .sidebar-brand {
+        justify-content: center;
+        padding: 0 0 30px;
+    }
+
+    .sidebar-brand h2,
+    .menu-label,
+    .menu-item span,
+    .user-info,
+    .logout-button span {
+        display: none;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 14px 8px;
+    }
+
+    .menu-item i {
+        font-size: 17px;
+    }
+
+    .sidebar-bottom {
+        align-items: center;
+        gap: 10px;
+        padding-top: 12px;
+    }
+
+    .sidebar-user {
+        justify-content: center;
+        padding: 4px 0;
+    }
+
+    .logout-button {
+        justify-content: center;
+        padding: 13px 8px;
+    }
+
+    .main-content {
+        width: calc(100% - 72px);
+        margin-left: 72px;
+    }
+
+}

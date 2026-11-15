@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | KinerjaKu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-layout">
+
+    <div id="sidebarContainer" data-base=""></div>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Dashboard</h2>
+                <p>Ringkasan informasi dan kinerja peternakan.</p>
+            </div>
+
+            <div class="topbar-date" id="currentDate"></div>
+        </header>
+
+        <section class="welcome-section">
+            <div>
+                <p>Selamat datang,</p>
+                <h1 id="welcomeName">Pengguna</h1>
+                <span id="welcomeRole">Role pengguna</span>
+            </div>
+
+            <div class="welcome-icon">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h3>Informasi Peternakan</h3>
+                <p>Ringkasan operasional usaha peternakan ayam petelur.</p>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-kiwi-bird"></i>
+                </div>
+                <div>
+                    <p>Populasi Ayam</p>
+                    <h3>3.000 <small>ekor</small></h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-warehouse"></i>
+                </div>
+                <div>
+                    <p>Jumlah Kandang</p>
+                    <h3>2 <small>unit</small></h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-egg"></i>
+                </div>
+                <div>
+                    <p>Produksi Telur</p>
+                    <h3>150 <small>kg/hari</small></h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                </div>
+                <div>
+                    <p>Kebutuhan Pakan</p>
+                    <h3>300 <small>kg/hari</small></h3>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h3>Ringkasan Kinerja Karyawan</h3>
+                <p>Informasi umum hasil evaluasi karyawan.</p>
+            </div>
+        </section>
+
+        <section class="stats-grid employee-stats">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <p>Total Karyawan</p>
+                    <h3 id="dashboardEmployeeTotal">7 <small>orang</small></h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div>
+                    <p>Rata-rata Nilai</p>
+                    <h3 id="dashboardAverage">90 <small>/100</small></h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                    <p>Sangat Baik</p>
+                    <h3 id="dashboardExcellent">5 <small>orang</small></h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <p>Perlu Evaluasi</p>
+                    <h3 id="dashboardNeedsEvaluation">0 <small>orang</small></h3>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="dashboard-bottom">
+
+            <div class="content-card">
+                <h3>Informasi Sistem</h3>
+                <p>
+                    KinerjaKu merupakan sistem informasi yang digunakan
+                    untuk mengelola dan memantau penilaian kinerja karyawan
+                    peternakan ayam petelur.
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>Hak Akses Anda</h3>
+                <p id="accessDescription">
+                    Memuat informasi hak akses...
+                </p>
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>© 2026 KinerjaKu. Sistem Informasi Penilaian Kinerja.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+
+/* ==========================================
+   MONITORING KINERJA - KINERJAKU
+========================================== */
+
+/* ==========================================
+   NAMA KARYAWAN
+========================================== */
+
+.monitoring-name {
+    font-weight: 600;
+    color: #172b43;
+}
+
+
+/* ==========================================
+   SCORE PROGRESS
+========================================== */
+
+.score-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 145px;
+}
+
+.score-progress strong {
+    min-width: 48px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #172b43;
+}
+
+.progress-track {
+    width: 100%;
+    height: 7px;
+    background: #e8eef5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #1675c5, #42a5f5);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+
+/* ==========================================
+   STATUS BADGE
+========================================== */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-badge.excellent {
+    color: #16834a;
+    background: #e4f7ec;
+}
+
+.status-badge.good {
+    color: #1675c5;
+    background: #e6f2ff;
+}
+
+.status-badge.average {
+    color: #b7791f;
+    background: #fff5df;
+}
+
+.status-badge.poor {
+    color: #dc3545;
+    background: #fff0f0;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.empty-state {
+    text-align: center;
+    padding: 45px 15px !important;
+    color: #8995a5;
+}
+
+.empty-state i {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #b8c5d3;
+}
+
+.empty-state p {
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   SEARCH INPUT
+========================================== */
+
+.employee-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    height: 48px;
+    margin-bottom: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+/* ICON SEARCH */
+
+.employee-search i {
+    position: absolute;
+    left: 16px;
+    font-size: 15px;
+    color: #94a3b8;
+    pointer-events: none;
+    transition: color 0.25s ease;
+}
+
+/* INPUT */
+
+.employee-search input {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px 0 44px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #172b43;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.employee-search input::placeholder {
+    color: #9aa8b8;
+    font-weight: 400;
+}
+
+/* FOCUS */
+
+.employee-search:focus-within {
+    background: #ffffff;
+    border-color: #1675c5;
+    box-shadow: 0 0 0 4px rgba(22, 117, 197, 0.10);
+}
+
+.employee-search:focus-within i {
+    color: #1675c5;
+}
+
+/* HOVER */
+
+.employee-search:hover {
+    border-color: #b8cde0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .employee-search {
+        max-width: 100%;
+    }
+
+    .score-progress {
+        min-width: 115px;
+        gap: 8px;
+    }
+
+    .score-progress strong {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .employee-search {
+        height: 45px;
+        margin-bottom: 18px;
+    }
+
+    .employee-search input {
+        font-size: 12px;
+    }
+
+    .status-badge {
+        padding: 5px 9px;
+        font-size: 10px;
+    }
+
+}

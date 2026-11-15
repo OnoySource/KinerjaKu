@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoring Kinerja | KinerjaKu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/monitoring.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <div id="sidebarContainer" data-base="../"></div>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Monitoring Kinerja</h2>
+                <p>Pantau perkembangan hasil evaluasi seluruh karyawan.</p>
+            </div>
+            <div class="topbar-date" id="currentDate"></div>
+        </header>
+
+        <section class="welcome-section">
+            <div>
+                <p>Pemantauan Kinerja</p>
+                <h1>Monitoring Karyawan</h1>
+                <span>Informasi hasil evaluasi dan pencapaian karyawan.</span>
+            </div>
+
+            <div class="welcome-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h3>Ringkasan Evaluasi</h3>
+                <p>Statistik hasil penilaian karyawan.</p>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <p>Total Penilaian</p>
+                    <h3 id="monitoringTotal">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div>
+                    <p>Rata-rata Nilai</p>
+                    <h3 id="monitoringAverage">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                    <p>Sangat Baik</p>
+                    <h3 id="monitoringExcellent">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <p>Perlu Evaluasi</p>
+                    <h3 id="monitoringNeedsEvaluation">0</h3>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h3>Data Monitoring</h3>
+                <p>Daftar hasil penilaian kinerja karyawan.</p>
+            </div>
+        </section>
+
+        <section class="content-card">
+
+            <div class="employee-search">
+                <i class="fa-solid fa-search"></i>
+                <input
+                    type="text"
+                    id="monitoringSearch"
+                    placeholder="Cari nama karyawan atau status..."
+                >
+            </div>
+
+            <div class="employee-table-wrapper">
+                <table class="employee-table">
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>NAMA KARYAWAN</th>
+                            <th>NILAI</th>
+                            <th>STATUS</th>
+                            <th>TANGGAL</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="monitoringTableBody"></tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>© 2026 KinerjaKu. Sistem Informasi Penilaian Kinerja.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+<script src="../assets/js/monitoring.js"></script>
+
+</body>
+</html>
