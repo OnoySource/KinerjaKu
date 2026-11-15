@@ -5,13 +5,6 @@
 
 const defaultEmployees = [
     {
-        id: "KRY001",
-        name: "KH Ahmad Munawir SQ",
-        position: "Owner",
-        department: "Manajemen",
-        status: "Aktif"
-    },
-    {
         id: "KRY002",
         name: "Tahmid",
         position: "Manager",
